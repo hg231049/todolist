@@ -11,7 +11,7 @@ const TodoItem = ({id,isDone,cate,content,date,onUpdate,onDelete}) => {
     }
 
     return (
-        <div  className="flex gap-5 pb-5 border-b border-dotted border-gray-300 ">
+        <div  className="flex gap-5 py-5 border-b border-dotted border-gray-300 ">
             <input type="checkbox" checked={isDone} onChange={onChangeCheckbox}/>
             <div className="min-w-[50px]">{cate}</div>
             <div className="flex-1">{content}</div>

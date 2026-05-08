@@ -31,7 +31,7 @@ const List = ({todos,onUpdate,onDelete}) => {
     const finishTodos = finishedTodos();
 
     return (
-        <div className="flex flex-col gap-5">
+        <div className="">
             <h3 className="font-bold">Todo List</h3>
             <input 
                 value={search} 
