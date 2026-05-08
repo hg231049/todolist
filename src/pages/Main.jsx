@@ -24,18 +24,21 @@ const mockData = [
     {
         id:0,
         isDone:false,
+        cate:"WORK",
         content:"react 공부하기",
         date : new Date().getTime(),
     },
     {
         id:1,
         isDone:true,
+        cate:"LIFE",
         content:"typescript 공부하기",
         date : new Date().getTime(),
     },
     {
         id:2,
         isDone:false,
+        cate:"ETC",
         content:"퇴근하기",
         date : new Date().getTime(),
     },
@@ -43,14 +46,15 @@ const mockData = [
 
 const Main = () => {
 
-    const [todos,setTodos] = useState([]);
-    const idRef = useRef(0); 
+    const [todos,setTodos] = useState(mockData);
+    const idRef = useRef(3); 
 
     // 1. 생성하기
-    const onCreate = (content) => {
+    const onCreate = (content,cate) => {
         const newTodo = {
             id:idRef.current ++,
             isDone:true,
+            cate:cate,
             content:content,
             date : new Date().getTime(),
         }
