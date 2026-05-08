@@ -1,5 +1,5 @@
 
-const Header = ({themMode}) => {
+const Header = ({themMode,isDark}) => {
     const date = new Date().toLocaleDateString();
     
     return (
@@ -9,7 +9,17 @@ const Header = ({themMode}) => {
                     <h2 className="font-bold text-2xl">Today Is..</h2>
                     <h1 className="font-black text-5xl">{date}</h1>
                 </div>
-                <button onClick={themMode} className="px-4 border border-gray-400 rounded-2xl cursor-pointer hover:bg-black hover:text-white [.darkMode_&]:hover:bg-white [.darkMode_&]:hover:text-black">버튼</button>
+                <div className="[&_button]:px-4 [&_button]:border [&_button]:border-gray-400  [&_button]:rounded-2xl [&_button]:cursor-pointer">
+                   {isDark === true ? 
+                        <button onClick={themMode} className="hover:bg-white hover:text-black">
+                            ON
+                        </button>
+                         :
+                         <button onClick={themMode} className="hover:bg-black hover:text-white ">
+                            OFF
+                        </button>
+                    } 
+                </div>
             </div>
         </header>
     )

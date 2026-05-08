@@ -16,7 +16,7 @@ function App() {
    <div className={`fixed inset-0 ${isDark === true ? "darkMode bg-black text-white" : "bg-white text-black"}`}>
       <div className="inner">
         <div className="flex flex-col gap-5">
-          <Header themMode={themHandler}/>
+          <Header themMode={themHandler} isDark={isDark}/>
           <Main/>
         </div>
       </div>
