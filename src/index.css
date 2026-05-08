@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@theme {
+  /* 여기서 바로 변수를 등록하면 Tailwind 클래스가 생성됩니다 */
+  --color-night-color: #002454;
+  --color-sunrise-color: #ffcc80;
+  --color-day-color: #1a237e;
+  --color-spring-color: #d81b60;
+  --color-field-color: #2e7d32;
+  --color-ground-color: #e0c097;
+  --color-text-color: #121212;
+  --color-subText-color: #5c5c5c;
+  --max-width-inner: 1440px;
+}
+@layer components {
+  .inner {
+    @apply max-w-(--max-width-inner) mx-auto px-[20px] w-full  box-border;
+  }
+}
+body {
+  position: relative;
+  font-family: "SUITE", sans-serif;
+  /* 안티앨리어싱(글자를 매끄럽게) 설정도 같이 해주면 좋아요 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 1;
+}
