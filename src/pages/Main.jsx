@@ -53,7 +53,7 @@ const Main = () => {
     const onCreate = (content,cate) => {
         const newTodo = {
             id:idRef.current ++,
-            isDone:true,
+            isDone:false,
             cate:cate,
             content:content,
             date : new Date().getTime(),
